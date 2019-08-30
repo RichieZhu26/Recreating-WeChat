@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18421001CBAFF98DE6C572CB /* Pods_Recreating_WeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7D1D43069862EE10109440 /* Pods_Recreating_WeChat.framework */; };
+		FC02BE3F2316E330009332FA /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC02BE3E2316E330009332FA /* MessageViewController.swift */; };
+		FC02BE412316E474009332FA /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC02BE402316E474009332FA /* MessageTableViewCell.swift */; };
+		FC0AD7FF230E675100834414 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0AD7FE230E675100834414 /* AddViewController.swift */; };
+		FC17E43222FD4893003B8AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E43122FD4893003B8AF4 /* AppDelegate.swift */; };
+		FC17E43922FD489D003B8AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC17E43822FD489D003B8AF4 /* Assets.xcassets */; };
+		FC17E44622FD48E8003B8AF4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44522FD48E8003B8AF4 /* ChatViewController.swift */; };
+		FC17E44822FD48FB003B8AF4 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44722FD48FB003B8AF4 /* ContactViewController.swift */; };
+		FC17E44A22FD490D003B8AF4 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44922FD490D003B8AF4 /* DiscoverViewController.swift */; };
+		FC17E44C22FD491A003B8AF4 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44B22FD491A003B8AF4 /* MeViewController.swift */; };
+		FC17E45022FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44F22FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift */; };
+		FC17E45222FD50D7003B8AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC17E45122FD50D7003B8AF4 /* LaunchScreen.storyboard */; };
+		FC17E45422FD50DF003B8AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC17E45322FD50DF003B8AF4 /* Main.storyboard */; };
+		FC17E45622FD55F0003B8AF4 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E45522FD55F0003B8AF4 /* ChatTableViewCell.swift */; };
+		FC17E45822FD9446003B8AF4 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E45722FD9446003B8AF4 /* Chat.swift */; };
+		FC24D5572302669F00AE82EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC24D5562302669F00AE82EC /* GoogleService-Info.plist */; };
+		FC24D5592302828C00AE82EC /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24D5582302828C00AE82EC /* System.swift */; };
+		FC24D55D230286FB00AE82EC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24D55C230286FB00AE82EC /* SignInViewController.swift */; };
+		FC24D55F2305562300AE82EC /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24D55E2305562200AE82EC /* DatabaseManager.swift */; };
+		FC24D5612305616200AE82EC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24D5602305616200AE82EC /* Message.swift */; };
+		FC24D5632306AE8700AE82EC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC24D5622306AE8700AE82EC /* SearchTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C7D1D43069862EE10109440 /* Pods_Recreating_WeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recreating_WeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B24D7383DB29A7B37AEA65 /* Pods-Recreating WeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recreating WeChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recreating WeChat/Pods-Recreating WeChat.debug.xcconfig"; sourceTree = "<group>"; };
+		AAB59841421D4C2EE227C83E /* Pods-Recreating WeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recreating WeChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recreating WeChat/Pods-Recreating WeChat.release.xcconfig"; sourceTree = "<group>"; };
+		FC02BE3E2316E330009332FA /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		FC02BE402316E474009332FA /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		FC0AD7FE230E675100834414 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		FC17E42E22FD4893003B8AF4 /* Recreating WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recreating WeChat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC17E43122FD4893003B8AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC17E43822FD489D003B8AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC17E43D22FD489D003B8AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC17E44522FD48E8003B8AF4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FC17E44722FD48FB003B8AF4 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		FC17E44922FD490D003B8AF4 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		FC17E44B22FD491A003B8AF4 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		FC17E44F22FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		FC17E45122FD50D7003B8AF4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC17E45322FD50DF003B8AF4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FC17E45522FD55F0003B8AF4 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		FC17E45722FD9446003B8AF4 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		FC24D5562302669F00AE82EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC24D5582302828C00AE82EC /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		FC24D55C230286FB00AE82EC /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FC24D55E2305562200AE82EC /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		FC24D5602305616200AE82EC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FC24D5622306AE8700AE82EC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC17E42B22FD4893003B8AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18421001CBAFF98DE6C572CB /* Pods_Recreating_WeChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		098D5295811D7D7AB8CC732D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52B24D7383DB29A7B37AEA65 /* Pods-Recreating WeChat.debug.xcconfig */,
+				AAB59841421D4C2EE227C83E /* Pods-Recreating WeChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B98DF09450CCF12E15FEC7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C7D1D43069862EE10109440 /* Pods_Recreating_WeChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC17E42522FD4893003B8AF4 = {
+			isa = PBXGroup;
+			children = (
+				FC17E43022FD4893003B8AF4 /* Recreating WeChat */,
+				FC17E42F22FD4893003B8AF4 /* Products */,
+				098D5295811D7D7AB8CC732D /* Pods */,
+				3B98DF09450CCF12E15FEC7C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC17E42F22FD4893003B8AF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC17E42E22FD4893003B8AF4 /* Recreating WeChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC17E43022FD4893003B8AF4 /* Recreating WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				FC17E43122FD4893003B8AF4 /* AppDelegate.swift */,
+				FC24D55C230286FB00AE82EC /* SignInViewController.swift */,
+				FC17E44F22FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift */,
+				FC17E44522FD48E8003B8AF4 /* ChatViewController.swift */,
+				FC17E45522FD55F0003B8AF4 /* ChatTableViewCell.swift */,
+				FC02BE3E2316E330009332FA /* MessageViewController.swift */,
+				FC02BE402316E474009332FA /* MessageTableViewCell.swift */,
+				FC17E44722FD48FB003B8AF4 /* ContactViewController.swift */,
+				FC0AD7FE230E675100834414 /* AddViewController.swift */,
+				FC24D5622306AE8700AE82EC /* SearchTableViewCell.swift */,
+				FC17E44922FD490D003B8AF4 /* DiscoverViewController.swift */,
+				FC17E44B22FD491A003B8AF4 /* MeViewController.swift */,
+				FC17E45322FD50DF003B8AF4 /* Main.storyboard */,
+				FC17E43822FD489D003B8AF4 /* Assets.xcassets */,
+				FC17E45122FD50D7003B8AF4 /* LaunchScreen.storyboard */,
+				FC17E43D22FD489D003B8AF4 /* Info.plist */,
+				FC24D5562302669F00AE82EC /* GoogleService-Info.plist */,
+				FC17E45722FD9446003B8AF4 /* Chat.swift */,
+				FC24D5582302828C00AE82EC /* System.swift */,
+				FC24D55E2305562200AE82EC /* DatabaseManager.swift */,
+				FC24D5602305616200AE82EC /* Message.swift */,
+			);
+			path = "Recreating WeChat";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC17E42D22FD4893003B8AF4 /* Recreating WeChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC17E44022FD489D003B8AF4 /* Build configuration list for PBXNativeTarget "Recreating WeChat" */;
+			buildPhases = (
+				3B0A974CCBF54AE21CF75F05 /* [CP] Check Pods Manifest.lock */,
+				FC17E42A22FD4893003B8AF4 /* Sources */,
+				FC17E42B22FD4893003B8AF4 /* Frameworks */,
+				FC17E42C22FD4893003B8AF4 /* Resources */,
+				A8570F9E32786F987056513F /* [CP] Embed Pods Frameworks */,
+				FD8DF39BC087E6C9CB1F59F8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Recreating WeChat";
+			productName = "Recreating WeChat";
+			productReference = FC17E42E22FD4893003B8AF4 /* Recreating WeChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC17E42622FD4893003B8AF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = myl142857;
+				TargetAttributes = {
+					FC17E42D22FD4893003B8AF4 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = FC17E42922FD4893003B8AF4 /* Build configuration list for PBXProject "Recreating WeChat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC17E42522FD4893003B8AF4;
+			productRefGroup = FC17E42F22FD4893003B8AF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC17E42D22FD4893003B8AF4 /* Recreating WeChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC17E42C22FD4893003B8AF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC17E45422FD50DF003B8AF4 /* Main.storyboard in Resources */,
+				FC24D5572302669F00AE82EC /* GoogleService-Info.plist in Resources */,
+				FC17E43922FD489D003B8AF4 /* Assets.xcassets in Resources */,
+				FC17E45222FD50D7003B8AF4 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B0A974CCBF54AE21CF75F05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Recreating WeChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8570F9E32786F987056513F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Recreating WeChat/Pods-Recreating WeChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recreating WeChat/Pods-Recreating WeChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD8DF39BC087E6C9CB1F59F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Recreating WeChat/Pods-Recreating WeChat-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Recreating WeChat/Pods-Recreating WeChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC17E42A22FD4893003B8AF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC17E45022FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift in Sources */,
+				FC24D55F2305562300AE82EC /* DatabaseManager.swift in Sources */,
+				FC0AD7FF230E675100834414 /* AddViewController.swift in Sources */,
+				FC17E44C22FD491A003B8AF4 /* MeViewController.swift in Sources */,
+				FC02BE3F2316E330009332FA /* MessageViewController.swift in Sources */,
+				FC17E44822FD48FB003B8AF4 /* ContactViewController.swift in Sources */,
+				FC17E44622FD48E8003B8AF4 /* ChatViewController.swift in Sources */,
+				FC17E45622FD55F0003B8AF4 /* ChatTableViewCell.swift in Sources */,
+				FC17E45822FD9446003B8AF4 /* Chat.swift in Sources */,
+				FC17E43222FD4893003B8AF4 /* AppDelegate.swift in Sources */,
+				FC24D5632306AE8700AE82EC /* SearchTableViewCell.swift in Sources */,
+				FC24D5592302828C00AE82EC /* System.swift in Sources */,
+				FC24D5612305616200AE82EC /* Message.swift in Sources */,
+				FC02BE412316E474009332FA /* MessageTableViewCell.swift in Sources */,
+				FC24D55D230286FB00AE82EC /* SignInViewController.swift in Sources */,
+				FC17E44A22FD490D003B8AF4 /* DiscoverViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FC17E43E22FD489D003B8AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC17E43F22FD489D003B8AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC17E44122FD489D003B8AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52B24D7383DB29A7B37AEA65 /* Pods-Recreating WeChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UL3P7FR3FP;
+				INFOPLIST_FILE = "Recreating WeChat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.richiezhu26;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC17E44222FD489D003B8AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAB59841421D4C2EE227C83E /* Pods-Recreating WeChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UL3P7FR3FP;
+				INFOPLIST_FILE = "Recreating WeChat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.richiezhu26;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC17E42922FD4893003B8AF4 /* Build configuration list for PBXProject "Recreating WeChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC17E43E22FD489D003B8AF4 /* Debug */,
+				FC17E43F22FD489D003B8AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC17E44022FD489D003B8AF4 /* Build configuration list for PBXNativeTarget "Recreating WeChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC17E44122FD489D003B8AF4 /* Debug */,
+				FC17E44222FD489D003B8AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC17E42622FD4893003B8AF4 /* Project object */;
+}
