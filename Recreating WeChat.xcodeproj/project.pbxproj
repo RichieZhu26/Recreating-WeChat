@@ -127,8 +127,8 @@
 				FC24D5562302669F00AE82EC /* GoogleService-Info.plist */,
 				FC17E45722FD9446003B8AF4 /* Chat.swift */,
 				FC24D5582302828C00AE82EC /* System.swift */,
-				FC24D55E2305562200AE82EC /* DatabaseManager.swift */,
 				FC24D5602305616200AE82EC /* Message.swift */,
+				FC24D55E2305562200AE82EC /* DatabaseManager.swift */,
 			);
 			path = "Recreating WeChat";
 			sourceTree = "<group>";

@@ -23,26 +23,26 @@ class ControlTabBarControllerViewController: UITabBarController, UITabBarControl
         // Do any additional setup after loading the view.
         chat = UINavigationController(rootViewController: ChatViewController())
         contact = UINavigationController(rootViewController: ContactViewController())
-        discover = UINavigationController(rootViewController: DiscoverViewController())
-        me = UINavigationController(rootViewController: MeViewController())
+//        discover = UINavigationController(rootViewController: DiscoverViewController())
+//        me = UINavigationController(rootViewController: MeViewController())
         
         // Create Chat
-        let chatBarItem = UITabBarItem(title: "Chats", image: nil, selectedImage: nil)
+        let chatBarItem = UITabBarItem(title: "Chats", image: UIImage(named: "chat"), selectedImage: nil)
         chat.tabBarItem = chatBarItem
         
         // Create Contact
-        let contactBarItem = UITabBarItem(title: "Contacts", image: nil, selectedImage: nil)
+        let contactBarItem = UITabBarItem(title: "Contacts", image: UIImage(named: "contact"), selectedImage: nil)
         contact.tabBarItem = contactBarItem
         
-        // Create Discover
-        let discoverBarItem = UITabBarItem(title: "Discover", image: nil, selectedImage: nil)
-        discover.tabBarItem = discoverBarItem
+//        // Create Discover
+//        let discoverBarItem = UITabBarItem(title: "Discover", image: nil, selectedImage: nil)
+//        discover.tabBarItem = discoverBarItem
+//
+//        // Create Me
+//        let meBarItem = UITabBarItem(title: "Me", image: nil, selectedImage: nil)
+//        me.tabBarItem = meBarItem
         
-        // Create Me
-        let meBarItem = UITabBarItem(title: "Me", image: nil, selectedImage: nil)
-        me.tabBarItem = meBarItem
-        
-        self.viewControllers = [chat, contact, discover, me]
+        self.viewControllers = [chat, contact]
         
         // Assign self for delegate for that ViewController can respond to UITabBarControllerDelegate methods
         self.delegate = self

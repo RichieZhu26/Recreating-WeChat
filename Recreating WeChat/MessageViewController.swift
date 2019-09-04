@@ -14,13 +14,16 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     var sendTextField: UITextField!
     var sendButton: UIButton!
     var backBarButtonItem: UIBarButtonItem!
+    var tap: UITapGestureRecognizer!
+    var timer: Timer!
     
     let reuseIdentifier = "messageCellReuse"
     var messages: [Message]!
+    var chatId = ""
     
-    let cellHeight: CGFloat = 70
-    let textFieldHeight: CGFloat = 70
-    let padding: CGFloat = 10
+    let cellHeight: CGFloat = 60
+    let textFieldHeight: CGFloat = 60
+    let padding: CGFloat = 12
     let buttonWidth: CGFloat = 100
     
     override func viewDidLoad() {
@@ -29,8 +32,7 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
         self.tabBarController?.tabBar.isHidden = true
-        let firstMessage = Message(sender: "Richie", recipient: "Helen", body: "Nice to meet you!", hasRead: false, timestamp: 0)
-        messages = [firstMessage]
+        messages = []
         
         tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +58,12 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backToChat))
         navigationItem.leftBarButtonItem = backBarButtonItem
+        
+        tap = UITapGestureRecognizer(target: self, action: #selector(keyboardDismiss))
+        view.addGestureRecognizer(tap)
+        
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(updateMessageTableView), userInfo: nil, repeats: true)
+        getChatId(friend: self.title!)
         
         setupConstraints()
     }
@@ -129,22 +137,50 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @objc func sendMessage() {
-        let chatId = getChatId(friend: self.title!)
-        print(chatId)
-//        let newMessage = Message(sender: System.currentUser!, recipient: self.title!, body: self.sendTextField.text ?? "", hasRead: false, timestamp: 0)
-//        DatabaseManager.sendMessage(chatId: chatId, message: newMessage) { success in
-//            if success {
-//                return
-//            }
-//        }
+        view.endEditing(true)
+        let newMessage = Message(sender: System.currentUser!, recipient: self.title!, body: self.sendTextField.text ?? "", hasRead: false, timestamp: 0)
+        if self.chatId != "" {
+            DatabaseManager.sendMessage(chatId: self.chatId, message: newMessage) { success in
+                if success {
+                    return
+                }
+            }
+        }
     }
     
-    func getChatId(friend: String) -> String {
-        var chatId = ""
+    @objc func keyboardDismiss() {
+        view.endEditing(true)
+    }
+    
+    func getChatId(friend: String) -> Void {
         DatabaseManager.getChatId(friend: friend) { id in
-            chatId = id
+            self.chatId = id
+            }
         }
-        return chatId
+    
+    @objc func updateMessageTableView() {
+        if self.chatId != "" {
+            DatabaseManager.updateMessageTableView(chatId: self.chatId) { messages in
+                self.renewMessages(messages: messages)
+            }
+        }
+    }
+    
+    func renewMessages(messages: [String]) {
+        var messageGenerator: Message
+        self.messages = []
+        for i in messages {
+            let senderEndIndex = i.firstIndex(of: "[")!
+            let recipientStartIndex = i.index(after: i.firstIndex(of: "]")!)
+            let recipientEndIndex = i.firstIndex(of: ":")!
+            let bodyStartIndex = i.index(after: i.firstIndex(of: " ")!)
+            let senderRange = i.startIndex..<senderEndIndex
+            let recipientRange = recipientStartIndex..<recipientEndIndex
+            let bodyRange = bodyStartIndex..<i.endIndex
+            messageGenerator = Message(sender: String(i[senderRange]), recipient: String(i[recipientRange]), body: String(i[bodyRange]), hasRead: false, timestamp: 0)
+            self.messages.append(messageGenerator)
+        }
+        tableView.reloadData()
     }
     
     @objc func backToChat() {

@@ -22,48 +22,6 @@ class DatabaseManager {
         return Database.database().reference(fromURL: url)
     }
     
-//    static func getChatInfo(completion: @escaping ([(String, String)]?) -> Void) {
-//        ref.child("users/\(System.currentUser!)/chats").observeSingleEvent(of: .value, with: { snapshot in
-//            if let infoDict = snapshot.value as? [String: Any] {
-//                let info = infoDict.map { (chatId, friend) in (chatId, friend as! String) }
-//                completion(info)
-//            } else {
-//                completion(nil)
-//            }
-//        }) { error in
-//            print(error.localizedDescription)
-//            completion(nil)
-//        }
-//    }
-    
-//    static func getChats(info: [(String, String)], completion: @escaping (Bool) -> Void) {
-//        var success = true
-//        let dispatchGroup = DispatchGroup()
-//        var chats = [Chat]()
-//        info.forEach { (chatId, friend) in
-//            dispatchGroup.enter()
-//            ref.child("chats/\(chatId)/messages").observeSingleEvent(of: .value, with: { snapshot in
-//                print(snapshot)
-//                if let messageDict = snapshot.value as? [String: Any] {
-//                    var messages = [Message]()
-//                    messageDict.forEach { (messageId, messageObject) in
-//                        let message = Message.fromDatabase(object: messageObject as! [String: Any])
-//                        message.id = messageId
-//                        messages.append(message)
-//                    }
-//                    chats.append(Chat(id: chatId, friend: friend, messages: messages.sorted { $0.timestamp < $1.timestamp }))
-//                } else {
-//                    chats.append(Chat(id: chatId, friend: friend, messages: []))
-//                }
-//                dispatchGroup.leave()
-//            })
-//        }
-//        dispatchGroup.notify(queue: .main, execute: {
-//            System.chats = chats
-//            completion(success)
-//        })
-//    }
-    
     static func findUsers(input: String, completion: @escaping ([String]) -> Void) {
         ref.child("users").queryOrderedByKey().queryStarting(atValue: input).queryEnding(atValue: "\(input)\u{f88f}").observeSingleEvent(of: .value) { snapshot in
 
@@ -77,8 +35,6 @@ class DatabaseManager {
     }
     
     static func addFriend(friend: String, completion: @escaping (Bool) -> Void) {
-        var tasks = 0
-
         ref.child("chats").childByAutoId().updateChildValues(["messages": true]) {
             (error, reference) in
             if let _ = error {
@@ -168,6 +124,17 @@ class DatabaseManager {
         }
     }
     
+    static func getRecentMessage(chatId: String, completion: @escaping (String) -> Void) {
+        ref.child("chats").child(chatId).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let messages = value?["messages"] as? [String] ?? []
+            completion(messages.last ?? "")
+        }) { (error) in
+            print(error.localizedDescription)
+            completion("")
+        }
+    }
+    
     static func updateChatTableView(completion: @escaping ([[String: String]]) -> Void) {
         ref.child("users").child(System.currentUser!).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
@@ -185,9 +152,9 @@ class DatabaseManager {
             let value = snapshot.value as? NSDictionary
             let myChats = value?["friends"] as? [[String: String]] ?? []
             for i in myChats{
-                for (key, value) in i {
+                for (key, id) in i {
                     if key == friend {
-                        chatId = value
+                        chatId = id
                     }
                 }
             }
@@ -203,8 +170,8 @@ class DatabaseManager {
         ref.child("chats").child(chatId).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             list = value?["messages"] as? [String] ?? []
-            list.append(message.body)
-            let updates = [chatId: list] as [String : Any]
+            list.append(message.sender + "[TO]" + message.recipient + ": " + message.body)
+            let updates = ["chats/\(chatId)/messages": list] as [String : Any]
             ref.updateChildValues(updates, withCompletionBlock: {(error, _) in
                 if let _ = error {
                     completion(false)
@@ -218,11 +185,11 @@ class DatabaseManager {
         }
     }
     
-    static func updateMessageTableView(chatId: String, completion: @escaping ([Message]) -> Void) {
-        ref.child("chats").observeSingleEvent(of: .value, with: { (snapshot) in
+    static func updateMessageTableView(chatId: String, completion: @escaping ([String]) -> Void) {
+        ref.child("chats").child(chatId).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            let currentList = value?[chatId] as? [Message] ?? []
-            completion(currentList)
+            let messages = value?["messages"] as? [String] ?? []
+            completion(messages)
         }) { (error) in
             print(error.localizedDescription)
             completion([])

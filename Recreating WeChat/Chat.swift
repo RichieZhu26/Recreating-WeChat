@@ -12,16 +12,12 @@ import UIKit
 class Chat {
     var id: String
     var friend: String
-    var messages: [Message]
+    var recentMessage: String
     
-    init(id: String, friend: String, messages: [Message]) {
+    init(id: String, friend: String, recentMessage: String) {
         self.id = id
         self.friend = friend
-        self.messages = messages
-    }
-    
-    func mostRecentMessage() -> Message? {
-        return messages.last
+        self.recentMessage = recentMessage
     }
 }
     

@@ -16,7 +16,7 @@ class ChatTableViewCell: UITableViewCell {
     var timeLabel: UILabel!
     
     let imageSize: CGFloat = 40
-    let padding: CGFloat = 10
+    let padding: CGFloat = 12
     let labelHeight: CGFloat = 20
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -24,9 +24,14 @@ class ChatTableViewCell: UITableViewCell {
         
         friendLabel = UILabel()
         friendLabel.translatesAutoresizingMaskIntoConstraints = false
+        friendLabel.textAlignment = .left
+        friendLabel.font = .monospacedDigitSystemFont(ofSize: 17, weight: .heavy)
         
         recentMessageLabel = UILabel()
         recentMessageLabel.translatesAutoresizingMaskIntoConstraints = false
+        recentMessageLabel.textAlignment = .left
+        recentMessageLabel.font = .systemFont(ofSize: 14)
+        recentMessageLabel.textColor = .gray
         
         contentView.addSubview(friendLabel)
         contentView.addSubview(recentMessageLabel)
@@ -43,7 +48,7 @@ class ChatTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             recentMessageLabel.leadingAnchor.constraint(equalTo: friendLabel.leadingAnchor),
-            recentMessageLabel.topAnchor.constraint(equalTo: friendLabel.bottomAnchor),
+            recentMessageLabel.topAnchor.constraint(equalTo: friendLabel.bottomAnchor, constant: padding),
             recentMessageLabel.heightAnchor.constraint(equalTo: friendLabel.heightAnchor)
             ])
         
@@ -52,7 +57,7 @@ class ChatTableViewCell: UITableViewCell {
     
     func configure(for chat: Chat) {
         friendLabel.text = chat.friend
-        recentMessageLabel.text = chat.mostRecentMessage()?.body
+        recentMessageLabel.text = chat.recentMessage
     }
     
     required init?(coder aDecoder: NSCoder) {

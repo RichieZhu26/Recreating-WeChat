@@ -11,11 +11,15 @@ import UIKit
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var searchBar: UISearchBar!
+    var dismissButton: UIButton!
     var searchTableView: UITableView!
+    var tap: UITapGestureRecognizer!
     
     let searchBarHeight: CGFloat = 50
+    let dismissButtonWidth: CGFloat = 72
     let cellHeight: CGFloat = 70
     let reuseIdentifier = "searchCellReuse"
+    let padding: CGFloat = 4
     var results = [String]()
     
     override func viewDidLoad() {
@@ -27,7 +31,15 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         searchBar = UISearchBar()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.delegate = self
+        searchBar.endEditing(true)
         view.addSubview(searchBar)
+        
+        dismissButton = UIButton()
+        dismissButton.translatesAutoresizingMaskIntoConstraints = false
+        dismissButton.setTitle("Dismiss", for: .normal)
+        dismissButton.setTitleColor(.black, for: .normal)
+        dismissButton.addTarget(self, action: #selector(selfDismiss), for: .touchUpInside)
+        view.addSubview(dismissButton)
         
         searchTableView = UITableView(frame: .zero)
         searchTableView.translatesAutoresizingMaskIntoConstraints = false
@@ -38,15 +50,25 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         searchTableView.tableFooterView = UIView()
         view.addSubview(searchTableView)
         
+//        tap = UITapGestureRecognizer(target: self, action: #selector(selfDismiss))
+//        view.addGestureRecognizer(tap)
+        
         setupConstraints()
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -dismissButtonWidth - (2 * padding)),
             searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             searchBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: searchBarHeight)
+            ])
+        
+        NSLayoutConstraint.activate([
+            dismissButton.leadingAnchor.constraint(equalTo: searchBar.trailingAnchor, constant: padding),
+            dismissButton.widthAnchor.constraint(equalToConstant: dismissButtonWidth),
+            dismissButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            dismissButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: searchBarHeight)
             ])
         
         NSLayoutConstraint.activate([
@@ -91,6 +113,12 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             cell.delegate?.searchTableViewCellDidAdd(result: text)
         }
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func selfDismiss() {
+        if self.results == [] {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     func update(with results: [String]) {

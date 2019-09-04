@@ -13,17 +13,22 @@ class MessageTableViewCell: UITableViewCell {
     var senderLabel: UILabel!
     var bodyLabel: UILabel!
     
-    let padding: CGFloat = 10
-    let labelHeight: CGFloat = 20
+    let padding: CGFloat = 12
+    let labelHeight: CGFloat = 15
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         senderLabel = UILabel()
         senderLabel.translatesAutoresizingMaskIntoConstraints = false
+        senderLabel.textAlignment = .left
+        senderLabel.textColor = .gray
+        senderLabel.font = .systemFont(ofSize: 15)
         
         bodyLabel = UILabel()
         bodyLabel.translatesAutoresizingMaskIntoConstraints = false
+        bodyLabel.textAlignment = .left
+        bodyLabel.font = .monospacedDigitSystemFont(ofSize: 15, weight: .medium)
         
         contentView.addSubview(senderLabel)
         contentView.addSubview(bodyLabel)
@@ -34,13 +39,13 @@ class MessageTableViewCell: UITableViewCell {
         // TODO: Update TableView Cell Constraints for labels and imageView
         NSLayoutConstraint.activate([
             senderLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            senderLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            senderLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             senderLabel.heightAnchor.constraint(equalToConstant: labelHeight)
             ])
         
         NSLayoutConstraint.activate([
             bodyLabel.leadingAnchor.constraint(equalTo: senderLabel.trailingAnchor, constant: padding),
-            bodyLabel.topAnchor.constraint(equalTo: senderLabel.topAnchor),
+            bodyLabel.centerYAnchor.constraint(equalTo: senderLabel.centerYAnchor),
             bodyLabel.heightAnchor.constraint(equalTo: senderLabel.heightAnchor)
             ])
         
@@ -48,7 +53,7 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     func configure(for message: Message) {
-        senderLabel.text = message.sender
+        senderLabel.text = message.sender + ":"
         bodyLabel.text = message.body
     }
     

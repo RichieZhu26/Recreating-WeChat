@@ -33,13 +33,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "wechat.png",
+      "filename" : "appIcon-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "wechat-1.png",
+      "filename" : "appIcon.png",
       "scale" : "3x"
     },
     {
