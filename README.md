@@ -8,4 +8,4 @@ Possible features of this project in the future: Photo/voice message, new messag
 
 
 
-<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/chat.jpeg" width="300">&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/contact.jpeg" width="300">
+<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/chat.jpeg" width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/contact.jpeg" width="300">
