@@ -7,5 +7,4 @@ To solve the problem of real-time data renewal on the UI, the app implements tim
 Possible features of this project in the future: Photo/voice message, new message notification, read/unread mark...
 <br><br>
 # Screenshots
-<br>
-<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/chat.jpeg" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/contact.jpeg" width="400">
+<br><img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/chat.jpeg" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/contact.jpeg" width="400">
