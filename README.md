@@ -6,4 +6,4 @@ To solve the problem of real-time data renewal on the UI, the app implements tim
 
 Possible features of this project in the future: Photo/voice message, new message notification, read/unread mark...
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](/https://github.com/RichieZhu26/Recreating-WeChat/blob/master/add_sc.jpeg)
