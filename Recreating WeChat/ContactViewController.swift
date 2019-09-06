@@ -18,7 +18,7 @@ class ContactViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.title = "Contacts"
-        view.backgroundColor = .white
+        view.backgroundColor = .lightGray
         
         addBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(rightTapped(_:)))
         navigationItem.rightBarButtonItem = addBarButtonItem

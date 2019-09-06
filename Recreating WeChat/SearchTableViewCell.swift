@@ -16,7 +16,7 @@ class SearchTableViewCell: UITableViewCell {
 
     var nameLabel: UILabel!
     
-    let padding: CGFloat = 10
+    let padding: CGFloat = 20
     let labelHeight: CGFloat = 20
     let labelWidth: CGFloat = 60
     
@@ -27,6 +27,7 @@ class SearchTableViewCell: UITableViewCell {
         
         nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.textColor = .orange
         
         contentView.addSubview(nameLabel)
     }
@@ -35,7 +36,7 @@ class SearchTableViewCell: UITableViewCell {
         // TODO: Update TableView Cell Constraints for labels and imageView
         NSLayoutConstraint.activate([
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             nameLabel.heightAnchor.constraint(equalToConstant: labelHeight),
             nameLabel.widthAnchor.constraint(equalToConstant: labelWidth)
             ])
@@ -45,7 +46,6 @@ class SearchTableViewCell: UITableViewCell {
     
     func configure(for result: String) {
         nameLabel.text = result
-        nameLabel.textColor = .black
     }
     
     required init?(coder aDecoder: NSCoder) {

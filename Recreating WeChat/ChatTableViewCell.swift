@@ -17,7 +17,7 @@ class ChatTableViewCell: UITableViewCell {
     
     let imageSize: CGFloat = 40
     let padding: CGFloat = 12
-    let labelHeight: CGFloat = 20
+    let labelHeight: CGFloat = 25
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

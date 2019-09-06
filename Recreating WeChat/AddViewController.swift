@@ -17,7 +17,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     let searchBarHeight: CGFloat = 50
     let dismissButtonWidth: CGFloat = 72
-    let cellHeight: CGFloat = 70
+    let cellHeight: CGFloat = 72
     let reuseIdentifier = "searchCellReuse"
     let padding: CGFloat = 4
     var results = [String]()
