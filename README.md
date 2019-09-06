@@ -5,4 +5,4 @@ This is a messaging app that recreates WeChat using Google sign-in and Firebase.
 To solve the problem of real-time data renewal on the UI, the app implements timers to regularly request updated information (e.g. chat list, message list) from Firebase and refresh the view accordingly.
 
 Possible features of this project in the future: Photo/voice message, new message notification, read/unread mark...
-![alt text](https://github.com/RichieZhu26/Recreating-WeChat/blob/master/add_sc.jpeg | width=100)
+![alt text](https://github.com/RichieZhu26/Recreating-WeChat/blob/master/add_sc.jpeg) {:height="700px" width="400px"}
