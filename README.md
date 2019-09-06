@@ -6,10 +6,17 @@ To solve the problem of real-time data renewal on the UI, the app implements tim
 
 Possible features of this project in the future: Photo/voice message, new message notification, read/unread mark...
 
-![](https://github.com/RichieZhu26/Recreating-WeChat/blob/master/chat.jpeg)
+
+<a href="url"><img src=https://github.com/RichieZhu26/Recreating-WeChat/blob/master/contact.jpeg" align="left" height="48" width="48" ></a>
+
+
 
 ![](https://github.com/RichieZhu26/Recreating-WeChat/blob/master/contact.jpeg)
 
+
+
 ![](https://github.com/RichieZhu26/Recreating-WeChat/blob/master/message.jpeg)
+
+
 
 ![](https://github.com/RichieZhu26/Recreating-WeChat/blob/master/add.jpeg)
