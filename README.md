@@ -7,11 +7,7 @@ To solve the problem of real-time data renewal on the UI, the app implements tim
 Possible features of this project in the future: Photo/voice message, new message notification, read/unread mark...
 
 
-<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/chat.jpeg" width="100">
-
-
-
-![](https://github.com/RichieZhu26/Recreating-WeChat/blob/master/contact.jpeg)
+<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/chat.jpeg" width="300"> <img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/chat.jpeg" width="300">
 
 
 
