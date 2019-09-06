@@ -15,8 +15,6 @@
 		FC17E43922FD489D003B8AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC17E43822FD489D003B8AF4 /* Assets.xcassets */; };
 		FC17E44622FD48E8003B8AF4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44522FD48E8003B8AF4 /* ChatViewController.swift */; };
 		FC17E44822FD48FB003B8AF4 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44722FD48FB003B8AF4 /* ContactViewController.swift */; };
-		FC17E44A22FD490D003B8AF4 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44922FD490D003B8AF4 /* DiscoverViewController.swift */; };
-		FC17E44C22FD491A003B8AF4 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44B22FD491A003B8AF4 /* MeViewController.swift */; };
 		FC17E45022FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC17E44F22FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift */; };
 		FC17E45222FD50D7003B8AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC17E45122FD50D7003B8AF4 /* LaunchScreen.storyboard */; };
 		FC17E45422FD50DF003B8AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC17E45322FD50DF003B8AF4 /* Main.storyboard */; };
@@ -43,8 +41,6 @@
 		FC17E43D22FD489D003B8AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC17E44522FD48E8003B8AF4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FC17E44722FD48FB003B8AF4 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		FC17E44922FD490D003B8AF4 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		FC17E44B22FD491A003B8AF4 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		FC17E44F22FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		FC17E45122FD50D7003B8AF4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC17E45322FD50DF003B8AF4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -118,8 +114,6 @@
 				FC17E44722FD48FB003B8AF4 /* ContactViewController.swift */,
 				FC0AD7FE230E675100834414 /* AddViewController.swift */,
 				FC24D5622306AE8700AE82EC /* SearchTableViewCell.swift */,
-				FC17E44922FD490D003B8AF4 /* DiscoverViewController.swift */,
-				FC17E44B22FD491A003B8AF4 /* MeViewController.swift */,
 				FC17E45322FD50DF003B8AF4 /* Main.storyboard */,
 				FC17E43822FD489D003B8AF4 /* Assets.xcassets */,
 				FC17E45122FD50D7003B8AF4 /* LaunchScreen.storyboard */,
@@ -292,7 +286,6 @@
 				FC17E45022FD4AAD003B8AF4 /* ControlTabBarControllerViewController.swift in Sources */,
 				FC24D55F2305562300AE82EC /* DatabaseManager.swift in Sources */,
 				FC0AD7FF230E675100834414 /* AddViewController.swift in Sources */,
-				FC17E44C22FD491A003B8AF4 /* MeViewController.swift in Sources */,
 				FC02BE3F2316E330009332FA /* MessageViewController.swift in Sources */,
 				FC17E44822FD48FB003B8AF4 /* ContactViewController.swift in Sources */,
 				FC17E44622FD48E8003B8AF4 /* ChatViewController.swift in Sources */,
@@ -304,7 +297,6 @@
 				FC24D5612305616200AE82EC /* Message.swift in Sources */,
 				FC02BE412316E474009332FA /* MessageTableViewCell.swift in Sources */,
 				FC24D55D230286FB00AE82EC /* SignInViewController.swift in Sources */,
-				FC17E44A22FD490D003B8AF4 /* DiscoverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
