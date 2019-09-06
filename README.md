@@ -7,5 +7,6 @@ To solve the problem of real-time data renewal on the UI, the app implements tim
 Possible features of this project in the future: Photo/voice message, new message notification, read/unread mark...
 <br><br>
 # Screenshots
-<br><img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/signin.jpeg" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/chat.jpeg" width="400">
-<br><br><img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/contact.jpeg" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/message.jpeg" width="400">
+<br><img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/signin.jpeg" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/contact.jpeg" width="400">
+<br><br><img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/search.jpeg" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/chat.jpeg" width="400">
+<br><br><img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/send.jpeg" width="400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/RichieZhu26/Recreating-WeChat/blob/master/screenshot/message.jpeg" width="400">
